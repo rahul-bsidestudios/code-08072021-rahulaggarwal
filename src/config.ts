@@ -1,16 +1,16 @@
-interface StatusCodesType {
+interface IStatusCodes {
     SUCCESS: number;
     BAD_REQUEST: number;
     SERVER_ERROR: number;
 }
 
-interface ConfigType {
+interface IConfig {
     PORT: number;
-    STATUS_CODES: STATUS_CODES_TYPE;
+    STATUS_CODES: IStatusCodes;
 }
 
-const CONFIG: CONFIG_TYPE = {
-    PORT: +process.env.PORT || 3000,
+const CONFIG: IConfig = {
+    PORT: +process.env.PORT,
     STATUS_CODES: {
         SUCCESS: 200,
         BAD_REQUEST: 400,
