@@ -1,0 +1,60 @@
+{
+  "name": "WeightManagement",
+  "version": "1.0.0",
+  "description": "BMI Calculator",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "nodemon --watch src -e ts,tsx --exec ts-node src/server.ts",
+    "build-ts": "tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "serve": "node dist/server.js",
+    "build": "npm run lint-fix && npm run build-ts",
+    "prod": "npm run serve",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration"
+  },
+  "engines": {
+    "node": "14.x.x",
+    "npm": "6.x.x"
+  },
+  "author": "Rahul Aggarwal",
+  "license": "MIT",
+  "homepage": "https://github.com/",
+  "repository": "https://github.com/rahul-bsidestudios/code-08072021-rahulaggarwal",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/koa": "2.0.49",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-joi-router": "^5.2.3",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa__cors": "^2.2.3",
+    "@types/node": "^12.0.12",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.10",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-joi-router": "^6.0.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/",
+      "/coverage/"
+    ]
+  }
+}
