@@ -43,7 +43,7 @@ describe("Person controller", () => {
 	        	throw: jest.fn()
 	        } as unknown as Context;
 	        await PersonController.getBMIData(context);
-	        expect(context.throw).toHaveBeenCalledWith(STATUS_CODES.BAD_REQUEST, 'Invali data');
+	        expect(context.throw).toHaveBeenCalledWith(STATUS_CODES.BAD_REQUEST, 'Invalid data');
 	    });
     });
 
