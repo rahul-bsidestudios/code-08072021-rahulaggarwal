@@ -8,8 +8,8 @@ const app = new Koa();
 // Enable cors with default options
 app.use(cors());
 
-// Enable bodyParser with default options
-app.use(bodyParser());
+// Enable bodyParser with extended json body limit
+app.use(bodyParser({ jsonLimit: '5MB' }));
 
 app.use(Router.middleware());
 
