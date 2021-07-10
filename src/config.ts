@@ -10,7 +10,7 @@ interface IConfig {
 }
 
 const CONFIG: IConfig = {
-    PORT: +process.env.PORT,
+    PORT: +process.env.PORT || 3000,
     STATUS_CODES: {
         SUCCESS: 200,
         BAD_REQUEST: 400,
