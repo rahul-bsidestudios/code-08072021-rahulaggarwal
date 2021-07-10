@@ -40,7 +40,7 @@ export default class PersonController {
                 const { HeightCm: height, WeightKg: weight } = person;
                 const bmi = calculateBMI(weight, height);
                 const { risk, category } = findCategoryAndRisk(bmi);
-                if (checkIfOverweight(bmi)) {
+                if (checkIfOverweight(category)) {
                     overweightCount++;
                 }
                 return {

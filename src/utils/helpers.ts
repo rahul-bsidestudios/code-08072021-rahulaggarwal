@@ -22,8 +22,8 @@ export const calculateBMI = (weight: number, height: number) => {
  * @param {number} bmi BMI of the person
  * @return {boolean} result true or false
  */
-export const checkIfOverweight = (bmi: number) => {
-    return bmi >= 25;
+export const checkIfOverweight = (category: string) => {
+    return category === BMI_CATEGORIES.OVERWEIGHT;
 };
 
 /**
@@ -36,36 +36,36 @@ export const checkIfOverweight = (bmi: number) => {
 export const findCategoryAndRisk = (bmi: number) => {
     if (bmi <= 18.4) {
         return {
-            risk: BMI_CATEGORIES.UNDERWEIGHT,
-            category: HEALTH_RISKS.MALNUTRITION
+            category: BMI_CATEGORIES.UNDERWEIGHT,
+            risk: HEALTH_RISKS.MALNUTRITION
         };
     }
     if (bmi <= 24.9) {
         return {
-            risk: BMI_CATEGORIES.NORMAL,
-            category: HEALTH_RISKS.LOW
+            category: BMI_CATEGORIES.NORMAL,
+            risk: HEALTH_RISKS.LOW
         };
     }
     if (bmi <= 29.9) {
         return {
-            risk: BMI_CATEGORIES.OVERWEIGHT,
-            category: HEALTH_RISKS.ENHANCED
+            category: BMI_CATEGORIES.OVERWEIGHT,
+            risk: HEALTH_RISKS.ENHANCED
         };
     }
     if (bmi <= 34.9) {
         return {
-            risk: BMI_CATEGORIES.MOD_OBESE,
-            category: HEALTH_RISKS.MEDIUM
+            category: BMI_CATEGORIES.MOD_OBESE,
+            risk: HEALTH_RISKS.MEDIUM
         };
     }
     if (bmi <= 39.9) {
         return {
-            risk: BMI_CATEGORIES.SEV_OBESE,
-            category: HEALTH_RISKS.HIGH
+            category: BMI_CATEGORIES.SEV_OBESE,
+            risk: HEALTH_RISKS.HIGH
         };
     }
     return {
-        risk: BMI_CATEGORIES.VERY_SEV_OBESE,
-        category: HEALTH_RISKS.VERY_HIGH
+        category: BMI_CATEGORIES.VERY_SEV_OBESE,
+        risk: HEALTH_RISKS.VERY_HIGH
     };
 };
