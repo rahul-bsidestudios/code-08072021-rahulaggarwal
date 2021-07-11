@@ -1,9 +1,9 @@
 import { BaseContext } from 'koa';
 import CONFIG from '../config';
+import { BMI_CATEGORIES } from '../constants';
 import {
     calculateBMI,
-    findCategoryAndRisk,
-    checkIfOverweight
+    findCategoryAndRisk
 } from '../utils/helpers';
 
 
@@ -40,12 +40,12 @@ export default class PersonController {
                 const { HeightCm: height, WeightKg: weight } = person;
                 const bmi = calculateBMI(weight, height);
                 const { risk, category } = findCategoryAndRisk(bmi);
-                if (checkIfOverweight(category)) {
+                if (category === BMI_CATEGORIES.OVERWEIGHT) {
                     overweightCount++;
                 }
                 return {
                     ...person,
-                    BMI: parseFloat(bmi.toFixed(2)),
+                    BMI: bmi,
                     BMICategory: category,
                     HealthRisk: risk
                 };

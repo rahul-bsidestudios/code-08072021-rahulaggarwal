@@ -13,17 +13,7 @@ export const calculateBMI = (weight: number, height: number) => {
         return 0;
     }
     const heightInCm = height / 100;
-    return (weight / (heightInCm * heightInCm));
-};
-
-/**
- * Check if person is overweight
- *
- * @param {number} bmi BMI of the person
- * @return {boolean} result true or false
- */
-export const checkIfOverweight = (category: string) => {
-    return category === BMI_CATEGORIES.OVERWEIGHT;
+    return parseFloat((weight / (heightInCm * heightInCm)).toFixed(2));
 };
 
 /**
