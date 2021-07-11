@@ -23,25 +23,25 @@ export const VALID_BMI_REQUEST_RESPONSE = {
 			HeightCm: 171,
 			WeightKg: 96,
 			BMI: 32.83,
-	        BMICategory: "Medium risk",
-	        HealthRisk: "Moderately obese"
+			BMICategory: "Moderately obese",
+	        HealthRisk: "Medium risk"
 		},
 		{
 			Gender: "Male",
 			HeightCm: 161,
 			WeightKg: 85,
 			BMI: 32.79,
-	        BMICategory: "Medium risk",
-	        HealthRisk: "Moderately obese"
+	        BMICategory: "Moderately obese",
+	        HealthRisk: "Medium risk",
 		},
 		{
 			Gender: "Male",
 			HeightCm: 180,
 			WeightKg: 77,
 			BMI: 23.77,
-	        BMICategory: "Low risk",
-	        HealthRisk: "Normal weight"
+	        BMICategory: "Normal weight",
+	        HealthRisk: "Low risk"
 		}
 	],
-	overweightCount: 2
+	overweightCount: 0
 }
