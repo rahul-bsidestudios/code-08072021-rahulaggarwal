@@ -66,7 +66,7 @@ Using Github Actions as a CI pipeline. The pipeline can be found at `/.github/wo
 Using Heroku to deploy the code automatically on every push to master branch after successful completion of the github workflow.
 
 # Public URL
-The application can be accessed using this endpoint - https://weight-bmi-management.herokuapp.com/
+The application can be accessed using this endpoint - https://weight-bmi-management.herokuapp.com/ (Note: The app is deployed on free heroku dyno and that exists in US region so the response will be slow for sure, try it locally if you wanna see the logic effeciency)
 
 # Route for getting the required data
 ```
